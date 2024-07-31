@@ -1,23 +1,23 @@
 pipeline {
     agent any
+
     stages {
-        stage('Checkout') {
-            steps {
-                git 'https://myapp.git'
-            }
-        }
         stage('Build') {
             steps {
-                script {
-                    docker.build('myapp:latest')
-                }
+                echo 'Building...'
+                // Add build steps here
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                // Add test steps here
             }
         }
         stage('Deploy') {
             steps {
-                script {
-                    def app = docker.run('myapp:latest', '-p 8000:8000')
-                }
+                echo 'Deploying...'
+                // Add deployment steps here
             }
         }
     }
