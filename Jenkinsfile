@@ -48,9 +48,9 @@ pipeline {
         stage("Deploy the Webserver"){
             steps{
                 sh "ansible-playbook deployDeployment.yml"
-               # sh "chmod +x startservers.sh"
+               #sh "chmod +x startservers.sh"
                 echo "Create a Socat to connect to our webserver from the Internet(from the outside of ec2 Instance)"
-               # sh "./startservers.sh"
+               #sh "./startservers.sh"
             }
         }
     }
