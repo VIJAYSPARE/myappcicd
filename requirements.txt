@@ -1,1 +1,4 @@
-Flask==2.0.1
+#Flask==2.0.1
+flask==2.0.1
+pytest
+Werkzeug==2.0.0
